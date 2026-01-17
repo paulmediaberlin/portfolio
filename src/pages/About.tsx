@@ -68,27 +68,27 @@ const About = () => {
               <motion.div variants={stagger} className="order-1 md:order-2 space-y-12">
                 <motion.div variants={fadeUp}>
                   <h1 className="display-lg mb-8">{t('about.title')}</h1>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-lg text-foreground leading-relaxed mb-6">
                     {t('about.intro')}
                   </p>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-foreground leading-relaxed">
                     {t('about.philosophy')}
                   </p>
                 </motion.div>
 
                 {/* Experience */}
                 <motion.div variants={fadeUp}>
-                  <h2 className="text-editorial-muted mb-6">
+                  <h2 className="text-editorial mb-6">
                     {t('about.experience.title')}
                   </h2>
                   <div className="space-y-6">
                     {experience.map((item, index) => (
                       <div key={index}>
                         <h3 className="font-display text-xl">{item.role}</h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-foreground">
                           {item.company}
                         </p>
-                        <p className="text-sm text-muted-foreground mt-1">
+                        <p className="text-sm text-foreground mt-1">
                           {item.period}
                         </p>
                       </div>
@@ -98,17 +98,17 @@ const About = () => {
 
                 {/* Education */}
                 <motion.div variants={fadeUp}>
-                  <h2 className="text-editorial-muted mb-6">
+                  <h2 className="text-editorial mb-6">
                     {t('about.education.title')}
                   </h2>
                   <div className="space-y-6">
                     {education.map((item, index) => (
                       <div key={index}>
                         <h3 className="font-display text-xl">{item.degree}</h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-foreground">
                           {item.institution}
                         </p>
-                        <p className="text-sm text-muted-foreground mt-1">
+                        <p className="text-sm text-foreground mt-1">
                           {item.year}
                         </p>
                       </div>

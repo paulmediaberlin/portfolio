@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Dark editorial palette - #262626 bg, #dfdfdf text, #a64141 accent */
-    --background: 0 0% 15%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 87%;
 
     --card: 0 0% 18%;

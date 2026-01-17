@@ -37,16 +37,15 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm tracking-wide uppercase transition-colors duration-300 ${
-                  isActive(link.path)
+                className={`text-sm tracking-wide uppercase transition-colors duration-300 ${isActive(link.path)
                     ? 'text-foreground'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
             ))}
-            
+
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
@@ -64,19 +63,16 @@ const Navbar = () => {
           >
             <div className="w-6 flex flex-col gap-1.5">
               <span
-                className={`block h-px bg-foreground transition-transform duration-300 ${
-                  mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
-                }`}
+                className={`block h-px bg-foreground transition-transform duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+                  }`}
               />
               <span
-                className={`block h-px bg-foreground transition-opacity duration-300 ${
-                  mobileMenuOpen ? 'opacity-0' : ''
-                }`}
+                className={`block h-px bg-foreground transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-0' : ''
+                  }`}
               />
               <span
-                className={`block h-px bg-foreground transition-transform duration-300 ${
-                  mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                }`}
+                className={`block h-px bg-foreground transition-transform duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                  }`}
               />
             </div>
           </button>
@@ -98,11 +94,10 @@ const Navbar = () => {
                     key={link.path}
                     to={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-2xl font-display ${
-                      isActive(link.path)
+                    className={`text-2xl font-display ${isActive(link.path)
                         ? 'text-foreground'
                         : 'text-muted-foreground'
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>

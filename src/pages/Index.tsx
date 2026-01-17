@@ -58,14 +58,14 @@ const Index = () => {
 
               <motion.p
                 variants={fadeUp}
-                className="font-display text-2xl md:text-3xl lg:text-4xl text-muted-foreground mb-8"
+                className="font-display text-2xl md:text-3xl lg:text-4xl text-foreground mb-8"
               >
                 {t('home.title')}
               </motion.p>
 
               <motion.p
                 variants={fadeUp}
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-16 leading-relaxed"
+                className="text-lg md:text-xl text-foreground max-w-2xl mb-16 leading-relaxed"
               >
                 {t('home.tagline')}
               </motion.p>

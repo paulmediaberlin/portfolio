@@ -37,7 +37,7 @@ const Work = () => {
               className="mb-20 md:mb-32"
             >
               <h1 className="display-lg mb-6">{t('work.title')}</h1>
-              <p className="text-muted-foreground text-lg max-w-xl">
+              <p className="text-foreground text-lg max-w-xl">
                 {t('work.subtitle')}
               </p>
             </motion.div>
