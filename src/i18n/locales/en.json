@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Creative Portfolio",
+    "name": "Paul Kremers",
+    "title": "Photographer & Videographer",
+    "tagline": "Capturing the poetry of architecture and the structures shaped by human vision.",
+    "viewWork": "View Work",
+    "aboutMe": "About Me",
+    "getInTouch": "Get in Touch"
+  },
+  "work": {
+    "title": "Selected Works",
+    "subtitle": "A curated collection of architectural photography and videography",
+    "works": [
+      {
+        "title": "Inaro Museum of Contemporary Art",
+        "year": "2022",
+        "description": "Exploring the interplay of light and concrete in modern museum architecture."
+      },
+      {
+        "title": "A Street Corner in Götzen",
+        "year": "2023",
+        "description": "Urban geometry captured in the quiet hours of dawn."
+      },
+      {
+        "title": "Not Even Spring Yet",
+        "year": "2023",
+        "description": "The stark beauty of winter architecture."
+      },
+      {
+        "title": "A Single Path",
+        "year": "2023",
+        "description": "Minimalist perspectives on Japanese garden design."
+      },
+      {
+        "title": "Resin Patterns by Chun Hei Kim",
+        "year": "2024",
+        "description": "Documenting the organic textures of contemporary art installations."
+      },
+      {
+        "title": "The Croalstead Building",
+        "year": "2024",
+        "description": "No matter the angle, new patterns emerge. One of my favorite subjects."
+      },
+      {
+        "title": "Vision of a Human Eye",
+        "year": "2025",
+        "description": "An experimental study in architectural perception."
+      },
+      {
+        "title": "Morning Light Study",
+        "year": "2025",
+        "description": "How early light transforms urban spaces."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "My career began with landscape photography, but architecture is where my passion truly lies. I am fascinated by the structures that emerge through human influence. I have made it my mission to show the world more of this beauty.",
+    "philosophy": "Every building tells a story. Through my lens, I seek to reveal the dialogue between space, light, and the human experience. My work is not merely documentation—it is interpretation, a visual poem written in shadow and form.",
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "role": "Creative Director",
+          "company": "Studio Rallia",
+          "period": "2021 – Present"
+        },
+        {
+          "role": "Photographer",
+          "company": "Studio Rallia",
+          "period": "2017 – 2021"
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "degree": "MA Photography",
+          "institution": "Art Institute in Stuttgart",
+          "year": "2025"
+        },
+        {
+          "degree": "BA Advertising",
+          "institution": "University of Frankfurt",
+          "year": "2017"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Open for Commissions",
+    "intro": "I'm always interested in new projects and collaborations. Whether you have a specific vision or just want to explore possibilities, I'd love to hear from you.",
+    "email": "Email",
+    "emailValue": "hello@paulkremers.com",
+    "studio": "Studio",
+    "studioValue": "Musterstraße 123, 12345 Musterstadt, Germany"
+  },
+  "footer": {
+    "copyright": "© 2025 Paul Kremers. All rights reserved."
+  }
+}
