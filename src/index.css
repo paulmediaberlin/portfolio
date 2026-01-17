@@ -38,7 +38,7 @@
     --radius: 0rem;
 
     /* Typography */
-    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-display: roboto, -apple-system, sans-serif;
     --font-body: 'Inter', -apple-system, sans-serif;
 
     /* Spacing */
