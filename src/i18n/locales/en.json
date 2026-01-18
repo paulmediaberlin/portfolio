@@ -9,7 +9,7 @@
     "greeting": "Creative Portfolio",
     "name": "Paul Kremers",
     "title": "Photographer & Videographer",
-    "tagline": "Capturing the poetry of architecture and the structures shaped by human vision.",
+    "tagline": "Capturing  of architecture and the structures shaped by human vision.",
     "viewWork": "View Work",
     "aboutMe": "About Me",
     "getInTouch": "Get in Touch"
@@ -77,12 +77,6 @@
         "year": "2023",
         "description": "Urban geometry captured in the quiet hours of dawn.",
         "type": "image"
-      },
-      {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
-        "type": "video"
       }
     ]
   },
