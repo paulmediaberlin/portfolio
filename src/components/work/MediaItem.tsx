@@ -140,16 +140,15 @@ const MediaItem = ({
               ref={videoRef}
               src={src}
               poster={poster}
-              muted={muted}              // ✅ IMPORTANT: bind to state (fixes unmute)
-              autoPlay                   // ✅ allow autoplay where permitted
+              muted
+              autoPlay
               loop
               playsInline
               preload="auto"
+              onClick={handleToggleMute}
               className="max-h-[80vh] w-full object-contain"
-              onLoadedMetadata={handleLoadedMetadata}
             />
 
-            {/* If autoplay is blocked, show a tap-to-play affordance */}
             {needsUserPlay && (
               <button
                 type="button"
