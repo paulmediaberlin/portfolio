@@ -78,24 +78,6 @@ const About = () => {
               {/* Experience and Education - Bottom Sections */}
               <motion.div variants={stagger} className="grid md:grid-cols-2 gap-16 md:gap-24">
                 {/* Experience */}
-                <motion.div variants={fadeUp}>
-                  <h2 className="text-editorial mb-6">
-                    {t('about.experience.title')}
-                  </h2>
-                  <div className="space-y-6">
-                    {experience.map((item, index) => (
-                      <div key={index}>
-                        <h3 className="font-display text-xl">{item.role}</h3>
-                        <p className="text-foreground">
-                          {item.company}
-                        </p>
-                        <p className="text-sm text-foreground mt-1">
-                          {item.period}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
 
                 {/* Education */}
                 <motion.div variants={fadeUp}>

@@ -111,7 +111,14 @@ const Index = () => {
                 <img
                   src={homeImage}
                   alt="Home illustration"
-                  className="w-full max-w-sm md:max-w-md xl:max-w-lg object-contain"
+                  className="
+    w-full
+    max-w-sm
+    md:max-w-md
+    lg:max-w-sm
+    xl:max-w-md
+    object-contain
+  "
                 />
               </motion.div>
             </motion.div>

@@ -9,83 +9,118 @@
     "greeting": "Creative Portfolio",
     "name": "Paul Kremers",
     "title": "Photographer & Videographer",
-    "tagline": "Capturing  of architecture and the structures shaped by human vision.",
+    "tagline": "BTS – Collabs – High-Impact Videos",
     "viewWork": "View Work",
     "aboutMe": "About Me",
     "getInTouch": "Get in Touch"
   },
   "work": {
-    "title": "Selected Works",
-    "subtitle": "A curated collection of architectural photography and videography",
+    "title": "Selected Work",
+    "subtitle": "A curated collection of my photography and videography",
     "works": [
       {
-        "title": "Inaro Museum of Contemporary Art",
-        "year": "2022",
-        "description": "Exploring the interplay of light and concrete in modern museum architecture.",
+        "title": "Boxing Gym",
+        "year": "2025",
+        "description": "Intensity in the ring. Light and shadow shape movement between the ropes.",
         "type": "image"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Back View in the Ring",
+        "year": "2025",
+        "description": "Focus before the next move. Warm light meets cool determination.",
         "type": "image"
       },
       {
-        "title": "The Nexus Business Center",
-        "year": "2021",
-        "description": "A look at the symbiosis of glass and steel in the corporate world.",
+        "title": "Ex-Football Player",
+        "year": "2025",
+        "description": "Behind the scenes of a video production. The creative process between editing and final vision.",
         "type": "video"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Man in the Car",
+        "year": "2025",
+        "description": "Cinematic street photography in an urban setting. Natural light and authentic moments in Berlin traffic.",
         "type": "image"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Fight Preparation",
+        "year": "2025",
+        "description": "Video editing in darkness. Raw footage transforms into a finished story on screen.",
         "type": "video"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Savigny World at Night",
+        "year": "2025",
+        "description": "Nocturnal urban documentation. High-contrast interplay of neon light and darkness in the neighborhood.",
         "type": "image"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "UFC Gym Punching Bags",
+        "year": "2025",
+        "description": "Symmetry and branding inside the UFC Gym. Red logos on black leather under muted light.",
         "type": "image"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Sandwich",
+        "year": "2025",
+        "description": "Depth of field meets food details. Warm tones on rustic paper.",
         "type": "image"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Olympic Stadium from Above",
+        "year": "2025",
+        "description": "Architectural photography from an aerial perspective. Berlin’s Olympic Stadium in its monumental composition.",
         "type": "image"
       },
       {
-        "title": "A Street Corner in Götzen",
-        "year": "2023",
-        "description": "Urban geometry captured in the quiet hours of dawn.",
+        "title": "Olympic Stadium Roof Detail",
+        "year": "2025",
+        "description": "Structural precision in monochrome. Focus on the architectural geometry of the iconic roof construction.",
+        "type": "image"
+      },
+      {
+        "title": "Motorcycles",
+        "year": "2025",
+        "description": "Silence before the start. Dramatic sky above two machines on empty asphalt.",
+        "type": "image"
+      },
+      {
+        "title": "Lamborghini",
+        "year": "2025",
+        "description": "Neon-green aggression in an urban environment. Chrome and concrete in contrast.",
+        "type": "image"
+      },
+      {
+        "title": "Pastry Display",
+        "year": "2025",
+        "description": "Sweet temptation behind glass. Depth of field plays with colors and textures.",
+        "type": "image"
+      },
+      {
+        "title": "Gold Bottle",
+        "year": "2025",
+        "description": "Golden details in focus. Tattoos, rings, and premium spirits in harmony.",
+        "type": "image"
+      },
+      {
+        "title": "Späti Portrait",
+        "year": "2025",
+        "description": "Late-night Späti moment in Berlin. Authentic light between cigarette machines and storefronts.",
+        "type": "image"
+      },
+      {
+        "title": "Street Motion",
+        "year": "2025",
+        "description": "Urban life in motion. Motion blur captures the flow of the city.",
         "type": "image"
       }
     ]
   },
   "about": {
     "title": "About Me",
-    "intro": "My career began with landscape photography, but architecture is where my passion truly lies. I am fascinated by the structures that emerge through human influence. I have made it my mission to show the world more of this beauty.",
-    "philosophy": "Every building tells a story. Through my lens, I seek to reveal the dialogue between space, light, and the human experience. My work is not merely documentation—it is interpretation, a visual poem written in shadow and form.",
+    "intro": "My journey into videography started early. After secondary school, I transferred to a film and media school, where I am currently completing my Abitur. Alongside my studies, I gained hands-on experience working for a media agency in Berlin. There, I learned a great deal about professional video production — from planning and shooting to post-production. Today, I realize my own projects and collaborate with clients and personalities such as The Meet Company, Michael Smolik, and ESN athletes. At 19, I independently produce videos, conceptualize projects, and tell stories with a strong focus on authenticity and dynamics.",
     "experience": {
-      "title": "Experience",
+      "title": "Professional Experience",
       "items": [
         {
           "role": "Creative Director",
@@ -103,28 +138,28 @@
       "title": "Education",
       "items": [
         {
-          "degree": "MA Photography",
-          "institution": "Art Institute in Stuttgart",
-          "year": "2025"
-        },
-        {
-          "degree": "BA Advertising",
-          "institution": "University of Frankfurt",
-          "year": "2017"
+          "degree": "Abitur with focus on Media and Design Technology",
+          "institution": "OSZ KIM",
+          "year": "2025 – Pending"
         }
       ]
     }
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Open for Commissions",
-    "intro": "I'm always interested in new projects and collaborations. Whether you have a specific vision or just want to explore possibilities, I'd love to hear from you.",
+    "subtitle": "Open for Projects",
+    "intro": "I am always interested in new projects and collaborations. Whether you have a clear vision or simply want to explore possibilities — I look forward to hearing from you.",
     "email": "Email",
-    "emailValue": "hello@paulkremers.com",
-    "studio": "Studio",
-    "studioValue": "Musterstraße 123, 12345 Musterstadt, Germany"
+    "emailValue": "paulkremers@aol.com",
+    "studio": "Location",
+    "studioValue": "Berlin",
+    "phone": "Phone",
+    "phoneValue": "+49 173 4953994",
+    "instagram": "Instagram",
+    "instagramValue": "paulkremers.media"
   },
   "footer": {
     "copyright": "© 2025 Paul Kremers. All rights reserved."
   }
 }
+

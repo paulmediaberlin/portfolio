@@ -19,63 +19,99 @@
     "subtitle": "Eine kuratierte Sammlung meiner Fotografie und Videografie",
     "works": [
       {
-        "title": "Inaro-Museum für zeitgenössische Kunst",
-        "year": "2022",
-        "description": "Die Wechselwirkung von Licht und Beton in moderner Museumsarchitektur.",
+        "title": "Boxing Gym",
+        "year": "2025",
+        "description": "Intensität im Ring. Licht und Schatten formen die Bewegung zwischen den Seilen.",
         "type": "image"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Rückenansicht im Ring",
+        "year": "2025",
+        "description": "Fokus vor dem nächsten Move. Warmes Licht trifft auf kühle Entschlossenheit.",
         "type": "image"
       },
       {
-        "title": "Das Nexus Business Center",
-        "year": "2021",
-        "description": "Ein Blick auf die Symbiose von Glas und Stahl in der Geschäftswelt.",
+        "title": "Ex-Football Player",
+        "year": "2025",
+        "description": "Behind the Scenes einer Videoproduktion. Der kreative Prozess zwischen Schnitt und finaler Vision.",
         "type": "video"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Mann im Auto",
+        "year": "2025",
+        "description": "Cinematic Street Photography im urbanen Kontext. Natürliches Licht und authentische Momente im Berliner Stadtverkehr. ",
         "type": "image"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Kampfvorbereitung",
+        "year": "2025",
+        "description": "Videoschnitt in der Dunkelheit. Raw Footage wird zu fertiger Story auf dem Screen.",
         "type": "video"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Savigny World nachts",
+        "year": "2025",
+        "description": "Nächtliche Urban Documentation. Kontrastreiches Spiel zwischen Neonlicht und Dunkelheit im Kiez.",
         "type": "image"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "UFC Gym Boxsäcke",
+        "year": "2025",
+        "description": "Symmetrie und Branding im UFC Gym. Rote Logos auf schwarzem Leder unter gedämpftem Licht",
         "type": "image"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Sandwich",
+        "year": "2025",
+        "description": "Tiefenschärfe trifft auf Food-Details. Warme Töne auf rustikalem Papier. 2025",
         "type": "image"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Olympiastadion von oben",
+        "year": "2025",
+        "description": "Architekturfotografie aus der Luftperspektive. Das Berliner Olympiastadion in seiner monumentalen Gesamtkomposition.",
         "type": "image"
       },
       {
-        "title": "Eine Straßenecke in Götzen",
-        "year": "2023",
-        "description": "Städtische Geometrie, eingefangen in den stillen Stunden der Morgendämmerung.",
+        "title": "Olympiastadion Dach-Detail",
+        "year": "2025",
+        "description": "Strukturelle Präzision in monochrom. Fokus auf die architektonische Geometrie der ikonischen Dachkonstruktion.",
+        "type": "image"
+      },
+      {
+        "title": "Mottorräder",
+        "year": "2025",
+        "description": "Stille vor dem Start. Dramatischer Himmel über zwei Maschinen auf leerem Asphalt.",
+        "type": "image"
+      },
+      {
+        "title": "Lamborghini",
+        "year": "2025",
+        "description": "Neon-grüne Aggression in urbaner Kulisse. Chrome und Beton im Kontrast.",
+        "type": "image"
+      },
+      {
+        "title": "Gebäck-Auslage",
+        "year": "2025",
+        "description": "Süße Versuchung in der Vitrine. Tiefenschärfe spielt mit Farben und Texturen.",
+        "type": "image"
+      },
+      {
+        "title": "Gold-Flasche",
+        "year": "2025",
+        "description": "Goldene Details im Fokus. Tattoos, Ringe und Premium-Spirits im Zusammenspiel.",
+        "type": "image"
+      },
+      {
+        "title": "Späti Portrait",
+        "year": "2025",
+        "description": "Nächtlicher Späti-Moment in Berlin. Authentisches Licht zwischen Zigarettenautomaten und Schaufenstern.",
+        "type": "image"
+      },
+      {
+        "title": "Street-Bewegung",
+        "year": "2025",
+        "description": "Urbanes Leben in Bewegung. Motion Blur fängt den Fluss der Stadt ein.",
         "type": "image"
       }
     ]
@@ -102,14 +138,9 @@
       "title": "Ausbildung",
       "items": [
         {
-          "degree": "MA Fotografie",
-          "institution": "Kunstinstitut in Stuttgart",
-          "year": "2025"
-        },
-        {
-          "degree": "BA Werbung",
-          "institution": "Universität Frankfurt",
-          "year": "2017"
+          "degree": "Abitur schwerpunkt Medien und Gestaltungstechnik",
+          "institution": "OSZ KIM",
+          "year": "2025 - Austehend"
         }
       ]
     }
