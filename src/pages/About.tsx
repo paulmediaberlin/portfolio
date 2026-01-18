@@ -51,31 +51,32 @@ const About = () => {
               initial="hidden"
               animate="visible"
               variants={stagger}
-              className="grid md:grid-cols-2 gap-16 md:gap-24"
+              className="space-y-16 md:space-y-24"
             >
-              {/* Portrait */}
-              <motion.div variants={fadeUp} className="order-2 md:order-1">
-                <div className="aspect-[3/4] overflow-hidden bg-muted">
-                  <img
-                    src={portrait}
-                    alt="Paul Kremers"
-                    className="w-full h-full object-cover"
-                  />
+              {/* Portrait and Intro - Top Section */}
+              <motion.div variants={fadeUp} className="grid md:grid-cols-2 gap-12 md:gap-16">
+                {/* Portrait */}
+                <div className="md:order-1">
+                  <div className="aspect-[3/4] overflow-hidden bg-muted">
+                    <img
+                      src={portrait}
+                      alt="Paul Kremers"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Intro Text */}
+                <div className="md:order-2 flex flex-col justify-center">
+                  <h1 className="display-lg mb-8">{t('about.title')}</h1>
+                  <p className="text-lg text-foreground leading-relaxed">
+                    {t('about.intro')}
+                  </p>
                 </div>
               </motion.div>
 
-              {/* Content */}
-              <motion.div variants={stagger} className="order-1 md:order-2 space-y-12">
-                <motion.div variants={fadeUp}>
-                  <h1 className="display-lg mb-8">{t('about.title')}</h1>
-                  <p className="text-lg text-foreground leading-relaxed mb-6">
-                    {t('about.intro')}
-                  </p>
-                  <p className="text-foreground leading-relaxed">
-                    {t('about.philosophy')}
-                  </p>
-                </motion.div>
-
+              {/* Experience and Education - Bottom Sections */}
+              <motion.div variants={stagger} className="grid md:grid-cols-2 gap-16 md:gap-24">
                 {/* Experience */}
                 <motion.div variants={fadeUp}>
                   <h2 className="text-editorial mb-6">

@@ -29,40 +29,15 @@
         "description": "Urbane Geometrie, eingefangen in den stillen Stunden der Morgendämmerung."
       },
       {
-        "title": "Noch nicht einmal Frühling",
-        "year": "2023",
-        "description": "Die herbe Schönheit winterlicher Architektur."
-      },
-      {
-        "title": "Ein einzelner Weg",
-        "year": "2023",
-        "description": "Minimalistische Perspektiven auf japanisches Gartendesign."
-      },
-      {
-        "title": "Harzmuster der Künstlerin Chun Hei Kim",
-        "year": "2024",
-        "description": "Dokumentation der organischen Texturen zeitgenössischer Kunstinstallationen."
-      },
-      {
-        "title": "Das Croalstead-Gebäude",
-        "year": "2024",
-        "description": "Egal aus welchem Blickwinkel, es entstehen immer neue Muster. Eines meiner Lieblingsobjekte."
-      },
-      {
-        "title": "Sicht eines menschlichen Auges",
-        "year": "2025",
-        "description": "Eine experimentelle Studie zur architektonischen Wahrnehmung."
-      },
-      {
-        "title": "Morgenlicht-Studie",
-        "year": "2025",
-        "description": "Wie frühes Licht urbane Räume transformiert."
+        "title": "Das Nexus-Geschäftszentrum",
+        "year": "2021",
+        "description": "Ein Blick auf die Symbiose von Glas und Stahl in der Geschäftswelt."
       }
     ]
   },
   "about": {
     "title": "Über Mich",
-    "intro": "Meine Karriere begann mit Landschaftsfotografie, doch in der Architektur liegt meine Passion. Ich bin begeistert von jenen Strukturen, die durch den Einfluss des Menschen entstehen können. Ich habe es zu meiner Mission gemacht, der Welt mehr davon zu zeigen.",
+    "intro": "Mein Weg in die Videografie begann früh. Nach der Mittelstufe wechelte ich auf eine Film- und Medienschule, auf der ich aktuell mein Abitur absolviere. Parallel dazu konnte ich bereits praktische Erfahrungen sammeln und für eine Medienagentur in Berlin arbeiten. Dort habe ich viel über professionelle Videoproduktion gelernt – von Planung und Dreh bis zur Postproduktion. Heute setze ich eigene Projekte um und arbeite mit Kunden und Persönlichkeiten wie The Meet Company, Michael Smolik sowie ESN-Athleten zusammen. Mit 19 Jahren produziere ich Videos eigenständig, konzipiere Projekte und erzähle Geschichten mit Fokus auf Authentizität und Dynamik.",
     "philosophy": "Jedes Gebäude erzählt eine Geschichte. Durch meine Linse versuche ich, den Dialog zwischen Raum, Licht und menschlicher Erfahrung zu enthüllen. Meine Arbeit ist nicht bloße Dokumentation – sie ist Interpretation, ein visuelles Gedicht, geschrieben in Schatten und Form.",
     "experience": {
       "title": "Berufserfahrung",

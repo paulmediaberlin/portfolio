@@ -18,7 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <AnimatePresence mode="wait">
           <Routes>
             <Route path="/" element={<Index />} />

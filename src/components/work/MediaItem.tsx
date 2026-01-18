@@ -15,7 +15,7 @@ interface MediaItemProps {
 const MediaItem = ({ src, title, year, description, index, type = 'image', poster }: MediaItemProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.15, once: true });
   const [isPlaying, setIsPlaying] = useState(false);
-  
+
   const direction = index % 2 === 0 ? 'left' : 'right';
 
   const variants = {
@@ -51,7 +51,9 @@ const MediaItem = ({ src, title, year, description, index, type = 'image', poste
       variants={variants}
       className="group"
     >
-      <div className="media-item aspect-[4/3] md:aspect-[16/10] mb-6 bg-muted">
+
+
+      <div className="media-item mb-6 bg-muted overflow-hidden flex items-center justify-center">
         {type === 'video' ? (
           <video
             src={src}
@@ -59,13 +61,14 @@ const MediaItem = ({ src, title, year, description, index, type = 'image', poste
             muted
             playsInline
             onClick={handleVideoClick}
-            className="cursor-pointer"
+            className="cursor-pointer object-contain max-h-full"
           />
         ) : (
           <img
             src={src}
             alt={title}
             loading="lazy"
+            className="max-h-[70vh]"
           />
         )}
       </div>
