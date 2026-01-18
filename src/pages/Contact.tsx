@@ -76,6 +76,19 @@ const Contact = () => {
                     </a>
                   </div>
                 </motion.div>
+                {/* Phone */}
+                <motion.div variants={fadeUp} className="flex gap-4">
+                  <Mail className="w-5 h-5 text-muted-foreground mt-1 shrink-0" />
+                  <div>
+                    <p className="text-editorial-muted mb-2">{t('contact.phone')}</p>
+                    <a
+                      href={`tel:${t('contact.phoneValue')}`}
+                      className="font-display text-2xl editorial-link"
+                    >
+                      {t('contact.phoneValue')}
+                    </a>
+                  </div>
+                </motion.div>
 
                 {/* Studio */}
                 <motion.div variants={fadeUp} className="flex gap-4">
@@ -87,6 +100,9 @@ const Contact = () => {
                     </p>
                   </div>
                 </motion.div>
+
+                {/* Instagram */}
+
               </motion.div>
             </motion.div>
           </div>
