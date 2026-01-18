@@ -195,11 +195,12 @@
     @apply overflow-hidden;
   }
 
-  .media-item img,
-  .media-item video {
-    @apply w-full h-full object-cover;
-    transition: transform var(--transition-slow);
-  }
+ 
+.media-item img,
+.media-item video {
+  transition: transform var(--transition-slow);
+}
+
 
   .media-item:hover img,
   .media-item:hover video {

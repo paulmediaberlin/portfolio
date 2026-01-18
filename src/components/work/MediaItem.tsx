@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { useState } from 'react';
 
 interface MediaItemProps {
   src: string;
@@ -12,9 +12,23 @@ interface MediaItemProps {
   poster?: string;
 }
 
-const MediaItem = ({ src, title, year, description, index, type = 'image', poster }: MediaItemProps) => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15, once: true });
-  const [isPlaying, setIsPlaying] = useState(false);
+const MediaItem = ({
+  src,
+  title,
+  year,
+  description,
+  index,
+  type = 'image',
+  poster,
+}: MediaItemProps) => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15, once: false });
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [muted, setMuted] = useState(true);
+
+  const isMobile =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(pointer: coarse)').matches;
 
   const direction = index % 2 === 0 ? 'left' : 'right';
 
@@ -33,15 +47,32 @@ const MediaItem = ({ src, title, year, description, index, type = 'image', poste
     },
   };
 
-  const handleVideoClick = (e: React.MouseEvent<HTMLVideoElement>) => {
-    const video = e.currentTarget;
-    if (isPlaying) {
-      video.pause();
+
+  const MuteIcon = ({ muted }: { muted: boolean }) => (
+    muted ? (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" />
+        <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" strokeWidth="2" />
+        <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    ) : (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M11 5L6 9H2v6h4l5 4V5z" fill="currentColor" />
+        <path d="M15 9a4 4 0 010 6" stroke="currentColor" strokeWidth="2" />
+      </svg>
+    )
+  );
+  /** Play / pause based on scroll visibility */
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isVisible) {
+      video.play().catch(() => { });
     } else {
-      video.play();
+      video.pause();
     }
-    setIsPlaying(!isPlaying);
-  };
+  }, [isVisible]);
 
   return (
     <motion.div
@@ -51,31 +82,61 @@ const MediaItem = ({ src, title, year, description, index, type = 'image', poste
       variants={variants}
       className="group"
     >
-
-
-      <div className="media-item mb-6 bg-muted overflow-hidden flex items-center justify-center">
+      <div className="media-item mb-6 flex items-center justify-center relative">
         {type === 'video' ? (
-          <video
-            src={src}
-            poster={poster}
-            muted
-            playsInline
-            onClick={handleVideoClick}
-            className="cursor-pointer object-contain max-h-full"
-          />
+          <div
+            className="relative w-full"
+          >
+            <video
+              ref={videoRef}
+              src={src}
+              poster={poster}
+              muted={muted}
+              loop
+              playsInline
+              preload="metadata"
+              className="max-h-[80vh] w-full object-cover cursor-pointer"
+              onClick={() => {
+                setMuted((m) => !m);
+              }}
+            />
+
+            {/* Sound affordance */}
+
+            <button
+              type="button"
+              aria-label={muted ? 'Unmute video' : 'Mute video'}
+              onClick={() => setMuted((m) => !m)}
+              className="
+    absolute bottom-4 right-4
+    bg-black/50 text-white
+    rounded-full p-2
+    backdrop-blur
+    opacity-60
+    hover:opacity-100
+    transition
+  "
+            >
+              <MuteIcon muted={muted} />
+            </button>
+
+          </div>
         ) : (
           <img
             src={src}
             alt={title}
             loading="lazy"
-            className="max-h-[70vh]"
+            className="max-h-[80vh]"
           />
         )}
       </div>
+
       <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
         <div>
           <h3 className="font-display text-2xl md:text-3xl">{title}</h3>
-          <p className="text-muted-foreground mt-2 max-w-xl">{description}</p>
+          <p className="text-muted-foreground mt-2 max-w-xl">
+            {description}
+          </p>
         </div>
         <span className="text-editorial-muted shrink-0">{year}</span>
       </div>
@@ -84,3 +145,4 @@ const MediaItem = ({ src, title, year, description, index, type = 'image', poste
 };
 
 export default MediaItem;
+

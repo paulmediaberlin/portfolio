@@ -8,6 +8,8 @@ import work1 from '@/assets/works/work-1.jpg';
 import work2 from '@/assets/works/work-2.jpg';
 import work3 from '@/assets/works/work-3.png';
 
+import video1 from '@/assets/works/video-1.mp4';
+
 const Work = () => {
   const { t } = useTranslation();
 
@@ -17,7 +19,7 @@ const Work = () => {
     description: string;
   }>;
 
-  const images = [work1, work2, work3];
+  const images = [work1, video1, work3];
 
   return (
     <Layout>
@@ -46,6 +48,7 @@ const Work = () => {
                   title={work.title}
                   year={work.year}
                   description={work.description}
+                  type={index === 1 ? 'video' : 'image'}
                   index={index}
                 />
               ))}
