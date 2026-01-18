@@ -4,11 +4,10 @@ import Layout from '@/components/layout/Layout';
 import PageTransition from '@/components/ui/PageTransition';
 import MediaItem from '@/components/work/MediaItem';
 
-import work1 from '@/assets/works/work-1.jpg';
-import work2 from '@/assets/works/work-2.jpg';
-import work3 from '@/assets/works/work-3.png';
+import work1 from '@/assets/works/work-1.png';
+import work2 from '@/assets/works/work-2.png';
+import work3 from '@/assets/works/work-3.mp4';
 
-import video1 from '@/assets/works/video-1.mp4';
 
 const Work = () => {
   const { t } = useTranslation();
@@ -17,9 +16,10 @@ const Work = () => {
     title: string;
     year: string;
     description: string;
+    type: 'image' | 'video';
   }>;
 
-  const images = [work1, video1, work3];
+  const images = [work1, work2, work3];
 
   return (
     <Layout>
@@ -48,7 +48,7 @@ const Work = () => {
                   title={work.title}
                   year={work.year}
                   description={work.description}
-                  type={index === 1 ? 'video' : 'image'}
+                  type={work.type}
                   index={index}
                 />
               ))}

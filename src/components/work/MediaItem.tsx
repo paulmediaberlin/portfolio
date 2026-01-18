@@ -85,7 +85,7 @@ const MediaItem = ({
       <div className="media-item mb-6 flex items-center justify-center relative">
         {type === 'video' ? (
           <div
-            className="relative w-full"
+            className="relative"
           >
             <video
               ref={videoRef}
@@ -95,7 +95,7 @@ const MediaItem = ({
               loop
               playsInline
               preload="metadata"
-              className="max-h-[80vh] w-full object-cover cursor-pointer"
+              className="max-h-[80vh] cursor-pointer"
               onClick={() => {
                 setMuted((m) => !m);
               }}
