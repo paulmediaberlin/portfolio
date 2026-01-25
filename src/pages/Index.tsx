@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import PageTransition from '@/components/ui/PageTransition';
 import { ArrowRight } from 'lucide-react';
-import homeImage from '@/assets/home.png';
+import homeImage from '@/assets/home.jpeg';
 
 const Index = () => {
   const { t } = useTranslation();

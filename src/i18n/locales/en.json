@@ -25,9 +25,9 @@
         "type": "image"
       },
       {
-        "title": "Back View in the Ring",
+        "title": "Sitting in the Gym",
         "year": "2025",
-        "description": "Focus before the next move. Warm light meets cool determination.",
+        "description": "Silence after the storm. Raw moments between tension and exhaustion.",
         "type": "image"
       },
       {
@@ -112,6 +112,12 @@
         "title": "Street Motion",
         "year": "2025",
         "description": "Urban life in motion. Motion blur captures the flow of the city.",
+        "type": "image"
+      },
+      {
+        "title": "Back View in the Ring",
+        "year": "2025",
+        "description": "Focus before the next move. Warm light meets cool determination.",
         "type": "image"
       }
     ]

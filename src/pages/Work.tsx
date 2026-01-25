@@ -20,6 +20,7 @@ import work13 from '@/assets/works/work-13.jpeg';
 import work14 from '@/assets/works/work-14.jpeg';
 import work15 from '@/assets/works/work-15.jpeg';
 import work16 from '@/assets/works/work-16.jpeg';
+import work17 from '@/assets/works/work-17.png';
 
 
 const Work = () => {
@@ -32,7 +33,7 @@ const Work = () => {
     type: 'image' | 'video';
   }>;
 
-  const images = [work1, work2, work3, work4, work5, work6, work7, work8, work9, work10, work11, work12, work13, work14, work15, work16];
+  const images = [work1, work2, work3, work4, work5, work6, work7, work8, work9, work10, work11, work12, work13, work14, work15, work16, work17];
 
   return (
     <Layout>

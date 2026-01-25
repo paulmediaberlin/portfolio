@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import PageTransition from '@/components/ui/PageTransition';
-import portrait from '@/assets/about.jpeg';
+import portrait from '@/assets/about.jpg';
 
 const About = () => {
   const { t } = useTranslation();
@@ -61,7 +61,7 @@ const About = () => {
                     <img
                       src={portrait}
                       alt="Paul Kremers"
-                      className="w-full h-full object-top object-cover"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>

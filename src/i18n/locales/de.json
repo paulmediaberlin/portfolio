@@ -25,9 +25,9 @@
         "type": "image"
       },
       {
-        "title": "Rückenansicht im Ring",
+        "title": "Sitzend im Gym",
         "year": "2025",
-        "description": "Fokus vor dem nächsten Move. Warmes Licht trifft auf kühle Entschlossenheit.",
+        "description": "Stille nach dem Storm. Rohe Momente zwischen Anspannung und Erschöpfung.",
         "type": "image"
       },
       {
@@ -113,12 +113,18 @@
         "year": "2025",
         "description": "Urbanes Leben in Bewegung. Motion Blur fängt den Fluss der Stadt ein.",
         "type": "image"
+      },
+      {
+        "title": "Rückenansicht im Ring",
+        "year": "2025",
+        "description": "Fokus vor dem nächsten Move. Warmes Licht trifft auf kühle Entschlossenheit.",
+        "type": "image"
       }
     ]
   },
   "about": {
     "title": "Über Mich",
-    "intro": "Mein Weg in die Videografie begann früh. Nach der Mittelstufe wechelte ich auf eine Film- und Medienschule, auf der ich aktuell mein Abitur absolviere. Parallel dazu konnte ich bereits praktische Erfahrungen sammeln und für eine Medienagentur in Berlin arbeiten. Dort habe ich viel über professionelle Videoproduktion gelernt – von Planung und Dreh bis zur Postproduktion. Heute setze ich eigene Projekte um und arbeite mit Kunden und Persönlichkeiten wie The Meet Company, Michael Smolik sowie ESN-Athleten zusammen. Mit 19 Jahren produziere ich Videos eigenständig, konzipiere Projekte und erzähle Geschichten mit Fokus auf Authentizität und Dynamik.",
+    "intro": "Mein Weg in die Videografie begann früh. Nach der Mittelstufe wechselte ich auf eine Film- und Medienschule, auf der ich aktuell mein Abitur absolviere. Parallel dazu konnte ich bereits praktische Erfahrungen sammeln und für eine Medienagentur in Berlin arbeiten. Dort habe ich viel über professionelle Videoproduktion gelernt – von Planung und Dreh bis zur Postproduktion. Heute setze ich eigene Projekte um und arbeite mit Kunden und Persönlichkeiten wie The Meet Company, Michael Smolik sowie ESN-Athleten zusammen. Mit 19 Jahren produziere ich Videos eigenständig, konzipiere Projekte und erzähle Geschichten mit Fokus auf Authentizität und Dynamik.",
     "experience": {
       "title": "Berufserfahrung",
       "items": [
@@ -138,9 +144,9 @@
       "title": "Ausbildung",
       "items": [
         {
-          "degree": "Abitur schwerpunkt Medien und Gestaltungstechnik",
+          "degree": "Abitur Schwerpunkt Medien und Gestaltungstechnik",
           "institution": "OSZ KIM",
-          "year": "2025 - Austehend"
+          "year": "2025 - Ausstehend"
         }
       ]
     }
