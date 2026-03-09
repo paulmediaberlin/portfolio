@@ -4,11 +4,10 @@ import Layout from '@/components/layout/Layout';
 import PageTransition from '@/components/ui/PageTransition';
 import MediaItem from '@/components/work/MediaItem';
 import { videos } from '@/data/works';
-import i18n from '@/i18n';
 
 const Videos = () => {
-  const { t } = useTranslation();
-  const lang = (i18n.language?.slice(0, 2) ?? 'en') as 'en' | 'de';
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.resolvedLanguage ?? i18n.language ?? 'en').slice(0, 2) as 'en' | 'de';
 
   return (
     <Layout>
