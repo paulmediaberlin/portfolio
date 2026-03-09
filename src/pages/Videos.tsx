@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import PageTransition from '@/components/ui/PageTransition';
 import MediaItem from '@/components/work/MediaItem';
-import { videoGroups } from '@/data/works';
+import { videoGroups } from '@/data/videos';
 
 const Videos = () => {
   const { t, i18n } = useTranslation();
@@ -55,7 +55,7 @@ const Videos = () => {
                         title=""
                         year=""
                         description=""
-                        type={item.type}
+                        type="video"
                         poster={item.poster}
                         index={0}
                         hideMeta

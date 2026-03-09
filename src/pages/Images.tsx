@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 import PageTransition from '@/components/ui/PageTransition';
 import MediaItem from '@/components/work/MediaItem';
-import { imageGroups } from '@/data/works';
+import { imageGroups } from '@/data/images';
 
 const Images = () => {
   const { t, i18n } = useTranslation();
@@ -46,20 +46,21 @@ const Images = () => {
                       <p className="text-muted-foreground max-w-3xl">{description}</p>
                     </div>
 
-                    <div className="space-y-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
                       {group.items.map((item, index) => (
-                        <MediaItem
-                          key={item.id}
-                          src={item.src}
-                          alt={item.alt ?? `${title} ${index + 1}`}
-                          title=""
-                          year=""
-                          description=""
-                          type={item.type}
-                          poster={item.poster}
+                        <div key={item.id} className="w-full max-w-xl">
+                          <MediaItem
+                            src={item.src}
+                            alt={item.alt ?? `${title} ${index + 1}`}
+                            title=""
+                            year=""
+                            description=""
+                          type="image"
+                          poster={undefined}
                           index={index}
                           hideMeta
                         />
+                        </div>
                       ))}
                     </div>
                   </motion.div>
