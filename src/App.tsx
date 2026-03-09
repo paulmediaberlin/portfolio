@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -17,11 +17,14 @@ import "./i18n";
 const queryClient = new QueryClient();
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search, hash } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  useLayoutEffect(() => {
+    // Ensure both document and body scroll positions reset
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname, search, hash]);
 
   return null;
 }
