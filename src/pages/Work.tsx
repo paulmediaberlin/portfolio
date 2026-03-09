@@ -12,15 +12,13 @@ import work5 from '@/assets/works/work-5.mp4';
 import work6 from '@/assets/works/work-6.jpg';
 import work7 from '@/assets/works/work-7.png';
 import work8 from '@/assets/works/work-8.jpg';
-import work9 from '@/assets/works/work-9.jpg';
-import work10 from '@/assets/works/work-10.jpg';
+import work9 from '@/assets/works/work-9.jpeg';
+import work10 from '@/assets/works/work-10.jpeg';
 import work11 from '@/assets/works/work-11.jpeg';
 import work12 from '@/assets/works/work-12.jpeg';
 import work13 from '@/assets/works/work-13.jpeg';
 import work14 from '@/assets/works/work-14.jpeg';
-import work15 from '@/assets/works/work-15.jpeg';
-import work16 from '@/assets/works/work-16.jpeg';
-import work17 from '@/assets/works/work-17.png';
+import work15 from '@/assets/works/work-15.png';
 
 
 const Work = () => {
@@ -33,7 +31,7 @@ const Work = () => {
     type: 'image' | 'video';
   }>;
 
-  const images = [work1, work2, work3, work4, work5, work6, work7, work8, work9, work10, work11, work12, work13, work14, work15, work16, work17];
+  const images = [work1, work2, work3, work4, work5, work6, work7, work8, work9, work10, work11, work12, work13, work14, work15];
 
   return (
     <Layout>
