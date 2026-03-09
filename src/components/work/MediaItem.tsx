@@ -4,6 +4,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface MediaItemProps {
   src: string;
+  alt: string;
   title: string;
   year: string;
   description: string;
@@ -34,6 +35,7 @@ const PlayIcon = () => (
 
 const MediaItem = ({
   src,
+  alt,
   title,
   year,
   description,
@@ -144,7 +146,7 @@ const MediaItem = ({
               autoPlay
               loop
               playsInline
-              preload="auto"
+              preload="metadata"
               onClick={handleToggleMute}
               className="max-h-[80vh] w-full object-contain"
             />
@@ -189,7 +191,7 @@ const MediaItem = ({
             </button>
           </div>
         ) : (
-          <img src={src} alt={title} loading="lazy" className="max-h-[80vh]" />
+          <img src={src} alt={alt} loading="lazy" className="max-h-[80vh]" />
         )}
       </div>
 
