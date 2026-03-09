@@ -11,6 +11,7 @@ import Images from "./pages/Images";
 import Videos from "./pages/Videos";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Bts from "./pages/Bts";
 import NotFound from "./pages/NotFound";
 import "./i18n";
 
@@ -40,6 +41,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/images" element={<Images />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/bts" element={<Bts />} />
             <Route path="/work" element={<Navigate to="/images" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

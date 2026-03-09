@@ -3,6 +3,7 @@
     "home": "Startseite",
     "images": "Bilder",
     "videos": "Videos",
+    "bts": "BTS",
     "about": "Über Mich",
     "contact": "Kontakt"
   },
@@ -23,9 +24,27 @@
     "title": "Videos",
     "subtitle": "Eine kuratierte Auswahl der Videografie"
   },
+  "bts": {
+    "title": "Behind the Scenes",
+    "subtitle": "Ein Blick in den Prozess, gruppiert nach Shoot",
+    "groups": {
+      "studio-editing": {
+        "title": "Studio-Schnitt",
+        "description": "Am Schnittplatz: Schnitt, Grading und Sound im dunklen Studio."
+      },
+      "gym-shoot": {
+        "title": "Gym-Shooting",
+        "description": "Am Set zwischen Seilen, Säcken und Schweiß – Bewegung einfangen."
+      },
+      "street-night": {
+        "title": "Straße bei Nacht",
+        "description": "Spätes Stadtlicht, Handkamera und schnelle Setups."
+      }
+    }
+  },
   "about": {
     "title": "Über Mich",
-    "intro": "Mein Weg in die Videografie begann früh. Nach der Mittelstufe wechselte ich auf eine Film- und Medienschule, auf der ich aktuell mein Abitur absolviere. Parallel dazu konnte ich bereits praktische Erfahrungen sammeln und für eine Medienagentur in Berlin arbeiten. Dort habe ich viel über professionelle Videoproduktion gelernt – von Planung und Dreh bis zur Postproduktion. Heute setze ich eigene Projekte um und arbeite mit Kunden und Persönlichkeiten wie The Meet Company, Michael Smolik sowie ESN-Athleten zusammen. Mit 19 Jahren produziere ich Videos eigenständig, konzipiere Projekte und erzähle Geschichten mit Fokus auf Authentizität und Dynamik.",
+    "intro": "Mein Weg in die Videografie begann früh – aus einer einfachen Faszination für Bilder, Bewegung und Geschichten. Schon während der Mittelstufe habe ich gemerkt, dass mich nicht nur Filme interessieren, sondern vor allem, wie sie entstehen. Kameraperspektiven, Schnitt, Rhythmus, Sounddesign – diese kleinen Details, die am Ende entscheiden, ob ein Video einfach nur gesehen oder wirklich gefühlt wird.\nAus diesem Interesse wurde schnell mehr als nur ein Hobby. Deshalb habe ich mich entschieden, auf eine Film- und Medienschule zu wechseln, auf der ich aktuell mein Abitur mache. Dort vertiefe ich mein technisches und kreatives Verständnis für Bildgestaltung, Storytelling und Produktion. Gleichzeitig habe ich aber früh gemerkt, dass man Videografie vor allem durch Praxis und eigene Projekte wirklich lernt.\nParallel zur Schule konnte ich bereits praktische Erfahrungen bei einer Medienagentur in Berlin sammeln. Dort habe ich den gesamten Ablauf professioneller Videoproduktionen kennengelernt – von der ersten Idee über Planung und Dreh bis hin zur Postproduktion. Diese Zeit hat mir gezeigt, wie wichtig Struktur, Teamarbeit und ein klarer visueller Blick sind, wenn aus einer Idee ein fertiger Film wird.\nHeute setze ich neben eigenen Projekten auch Produktionen für Kunden und Persönlichkeiten um. Dazu gehören unter anderem The Meat Company, Michael Smolik sowie mehrere ESN-Athleten. Außerdem habe ich an einem Kurzfilmprojekt mit Abdu, auf Social Media besser bekannt als „The Voice Man“, gearbeitet – einem Creator, der mit sehr tiefgründigem Content auf TikTok und Instagram ein großes Publikum erreicht.\nVideografie ist für mich nicht nur ein Job oder ein kreatives Hobby. Ich kann mich stundenlang mit Kamera-Settings, Lichtsetzung, Bildkomposition oder Sounddesign beschäftigen und verliere mich manchmal komplett darin, kleine Details im Schnitt so lange zu perfektionieren, bis alles zusammenpasst. Dieses „Nerdige“ an Bild und Ton ist genau das, was mich antreibt.\nMit 19 Jahren produziere ich eigenständig Videos, entwickle Konzepte, plane Drehs und setze Projekte von der Idee bis zum fertigen Film um. Mein Ziel ist es, Geschichten visuell so zu erzählen, dass sie nicht nur gut aussehen, sondern auch etwas transportieren – eine Stimmung, eine Energie oder eine Persönlichkeit.\nUnd das alles war erst der Anfang.",
     "experience": {
       "title": "Berufserfahrung",
       "items": [

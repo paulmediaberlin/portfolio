@@ -11,6 +11,7 @@ interface MediaItemProps {
   index: number;
   type?: 'image' | 'video';
   poster?: string;
+  hideMeta?: boolean;
 }
 
 const MuteIcon = ({ muted }: { muted: boolean }) =>
@@ -42,6 +43,7 @@ const MediaItem = ({
   index,
   type = 'image',
   poster,
+  hideMeta,
 }: MediaItemProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.15, once: false });
 
@@ -195,16 +197,17 @@ const MediaItem = ({
         )}
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-        <div>
-          <h3 className="font-display text-2xl md:text-3xl">{title}</h3>
-          <p className="text-muted-foreground mt-2 max-w-xl">{description}</p>
+      {!hideMeta && (title || description || year) && (
+        <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+          <div>
+            {title && <h3 className="font-display text-2xl md:text-3xl">{title}</h3>}
+            {description && <p className="text-muted-foreground mt-2 max-w-xl">{description}</p>}
+          </div>
+          {year && <span className="text-editorial-muted shrink-0">{year}</span>}
         </div>
-        <span className="text-editorial-muted shrink-0">{year}</span>
-      </div>
+      )}
     </motion.div>
   );
 };
 
 export default MediaItem;
-
