@@ -19,6 +19,14 @@ const About = () => {
     year: string;
   }>;
 
+  const paragraphs = t('about.intro').split('\n').filter(Boolean);
+
+  const meta = [
+    { label: t('about.meta.locationLabel'), value: t('about.meta.location') },
+    { label: t('about.meta.roleLabel'), value: t('about.meta.role') },
+    { label: t('about.meta.clientsLabel'), value: t('about.meta.clients') },
+  ];
+
   const stagger = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,49 +59,64 @@ const About = () => {
               initial="hidden"
               animate="visible"
               variants={stagger}
-              className="space-y-16 md:space-y-24"
+              className="space-y-20 md:space-y-28"
             >
-              {/* Portrait and Intro - Top Section */}
-              <motion.div variants={fadeUp} className="grid md:grid-cols-2 gap-12 md:gap-16">
+              {/* Portrait + Narrative */}
+              <motion.div
+                variants={fadeUp}
+                className="grid gap-12 lg:gap-16 lg:grid-cols-[minmax(0,1fr)_360px]"
+              >
+                {/* Text column */}
+                <div className="space-y-8 lg:space-y-10">
+                  <h1 className="display-lg">{t('about.title')}</h1>
+
+                  <div className="space-y-6 max-w-3xl text-lg leading-relaxed text-foreground">
+                    {paragraphs.map((para, idx) => (
+                      <p key={idx}>{para}</p>
+                    ))}
+                  </div>
+
+                  <div className="border-l-2 border-foreground/40 pl-4 text-foreground/90 italic text-lg max-w-2xl">
+                    {t('about.quote')}
+                  </div>
+                </div>
+
                 {/* Portrait */}
-                <div className="md:order-1">
+                <div className="lg:sticky lg:top-24 lg:self-start">
                   <div className="aspect-[3/4] overflow-hidden bg-muted">
                     <img
                       src={portrait}
                       alt="Paul Kremers"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>
-
-                {/* Intro Text */}
-                <div className="md:order-2 flex flex-col justify-center">
-                  <h1 className="display-lg mb-8">{t('about.title')}</h1>
-                  <p className="text-lg text-foreground leading-relaxed">
-                    {t('about.intro')}
-                  </p>
-                </div>
               </motion.div>
 
-              {/* Experience and Education - Bottom Sections */}
-              <motion.div variants={stagger} className="grid md:grid-cols-2 gap-16 md:gap-24">
-                {/* Experience */}
+              {/* Experience & Education */}
+              <motion.div variants={stagger} className="grid md:grid-cols-2 gap-12 md:gap-16">
+                <motion.div variants={fadeUp} className="space-y-6">
+                  <h2 className="text-editorial mb-2">{t('about.experience.title')}</h2>
+                  <div className="space-y-5">
+                    {experience.map((item, index) => (
+                      <div key={index} className="space-y-1">
+                        <h3 className="font-display text-xl text-foreground">{item.role}</h3>
+                        <p className="text-muted-foreground">{item.company}</p>
+                        <p className="text-sm text-editorial-muted">{item.period}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
 
-                {/* Education */}
-                <motion.div variants={fadeUp}>
-                  <h2 className="text-editorial mb-6">
-                    {t('about.education.title')}
-                  </h2>
-                  <div className="space-y-6">
+                <motion.div variants={fadeUp} className="space-y-6">
+                  <h2 className="text-editorial mb-2">{t('about.education.title')}</h2>
+                  <div className="space-y-5">
                     {education.map((item, index) => (
-                      <div key={index}>
-                        <h3 className="font-display text-xl">{item.degree}</h3>
-                        <p className="text-foreground">
-                          {item.institution}
-                        </p>
-                        <p className="text-sm text-foreground mt-1">
-                          {item.year}
-                        </p>
+                      <div key={index} className="space-y-1">
+                        <h3 className="font-display text-xl text-foreground">{item.degree}</h3>
+                        <p className="text-muted-foreground">{item.institution}</p>
+                        <p className="text-sm text-editorial-muted">{item.year}</p>
                       </div>
                     ))}
                   </div>

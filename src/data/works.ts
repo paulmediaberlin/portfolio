@@ -20,6 +20,27 @@ export type WorkItem = {
   };
 };
 
+export type MediaGroupItem = {
+  id: string;
+  type: "image" | "video";
+  src: string;
+  poster?: string;
+  alt?: string;
+};
+
+export type MediaGroup = {
+  id: string;
+  title: {
+    en: string;
+    de: string;
+  };
+  description: {
+    en: string;
+    de: string;
+  };
+  items: MediaGroupItem[];
+};
+
 // ─────────────────────────────────────────────────────────────────────────────
 // WORKS CATALOGUE
 // To add new content:
@@ -305,3 +326,101 @@ export const works: WorkItem[] = [
 
 export const images = works.filter((w) => w.type === "image");
 export const videos = works.filter((w) => w.type === "video");
+
+const workById = Object.fromEntries(works.map((w) => [w.id, w]));
+
+export const imageGroups: MediaGroup[] = [
+  {
+    id: "gym",
+    title: { en: "Gym & Ring", de: "Gym & Ring" },
+    description: {
+      en: "Sweat, ropes, and focus inside the gym.",
+      de: "Schweiß, Seile und Fokus im Gym.",
+    },
+    items: ["boxing-gym", "sitting-in-the-gym", "ufc-gym-punching-bags", "back-view-in-the-ring"].map((id) => {
+      const w = workById[id];
+      return {
+        id,
+        type: "image" as const,
+        src: w.src,
+        alt: w.text.en.alt,
+      };
+    }),
+  },
+  {
+    id: "street-night",
+    title: { en: "Street & Night", de: "Straße & Nacht" },
+    description: {
+      en: "Urban light, motion, and late city energy.",
+      de: "Städtisches Licht, Bewegung und späte Stadtenergie.",
+    },
+    items: [
+      "man-in-the-car",
+      "savigny-world-at-night",
+      "motorcycles",
+      "lamborghini",
+      "spati-portrait",
+      "street-motion",
+    ].map((id) => {
+      const w = workById[id];
+      return {
+        id,
+        type: "image" as const,
+        src: w.src,
+        alt: w.text.en.alt,
+      };
+    }),
+  },
+  {
+    id: "product-food",
+    title: { en: "Product & Food", de: "Produkt & Food" },
+    description: {
+      en: "Texture, detail, and controlled light for objects and food.",
+      de: "Textur, Details und kontrolliertes Licht für Produkte und Food.",
+    },
+    items: ["sandwich", "pastry-display", "gold-bottle"].map((id) => {
+      const w = workById[id];
+      return {
+        id,
+        type: "image" as const,
+        src: w.src,
+        alt: w.text.en.alt,
+      };
+    }),
+  },
+];
+
+export const videoGroups: MediaGroup[] = [
+  {
+    id: "studio-editing",
+    title: { en: "Studio Editing", de: "Studio-Schnitt" },
+    description: {
+      en: "Cutting, grading, and sound shaping in the dark.",
+      de: "Schnitt, Grading und Sound im dunklen Studio.",
+    },
+    items: [
+      {
+        id: "ex-football-player",
+        type: "video",
+        src: workById["ex-football-player"].src,
+        alt: workById["ex-football-player"].text.en.alt,
+      },
+    ],
+  },
+  {
+    id: "fight-preparation",
+    title: { en: "Fight Preparation", de: "Kampfvorbereitung" },
+    description: {
+      en: "Raw footage turning into a story on screen.",
+      de: "Rohmaterial, das zur Story auf dem Screen wird.",
+    },
+    items: [
+      {
+        id: "fight-preparation",
+        type: "video",
+        src: workById["fight-preparation"].src,
+        alt: workById["fight-preparation"].text.en.alt,
+      },
+    ],
+  },
+];
