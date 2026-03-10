@@ -19,17 +19,22 @@ export type ImageGroup = {
 // 3) Done – /images renders automatically
 export const imageGroups: ImageGroup[] = [
   {
-    id: 'gym',
-    title: { en: 'Gym & Ring', de: 'Gym & Ring' },
+    id: 'savigny-neon-nights',
+    title: {
+      en: 'Neon Nights at Savignyplatz',
+      de: 'Neon Nights am Savignyplatz'
+    },
     description: {
-      en: 'Sweat, ropes, and focus inside the gym.',
-      de: 'Schweiß, Seile und Fokus im Gym.',
+      en: 'Nighttime urban documentation in front of the Späti Savigny World. Contrasts of neon light, shadows, and neighborhood street life form a raw, authentic snapshot of the Berlin night.',
+      de: 'Nächtliche Urban Documentation vor dem Späti Savigny World. Kontraste aus Neonlicht, Schatten und Kiezleben formen eine rohe, authentische Momentaufnahme der Berliner Nacht.'
     },
     items: [
-      { id: 'boxing-gym', src: `${base}works/work-1.png`, alt: 'Boxer in a gym, dramatic light and shadow between the ropes' },
-      { id: 'sitting-in-the-gym', src: `${base}works/work-2.png`, alt: 'Athlete sitting in a gym, quiet moment after training' },
-      { id: 'ufc-gym-punching-bags', src: `${base}works/work-7.png`, alt: 'Row of UFC-branded punching bags in a gym under muted light' },
-      { id: 'back-view-in-the-ring', src: `${base}works/work-15.png`, alt: 'Boxer seen from behind in the ring, warm light illuminating the scene' },
+      { id: 'savigny-1', src: `${base}works/group-Savigny-1.jpeg`, alt: 'Neon-lit street scene at Savignyplatz outside Späti Savigny World at night' },
+      { id: 'savigny-2', src: `${base}works/group-Savigny-2.jpeg`, alt: 'Night street atmosphere near Savignyplatz with neon reflections and shadows' },
+      { id: 'savigny-3', src: `${base}works/group-Savigny-3.jpeg`, alt: 'Urban nightlife moment around Savignyplatz captured under neon light' },
+      { id: 'savigny-4', src: `${base}works/group-Savigny-4.jpeg`, alt: 'People and street life illuminated by neon lights at Savignyplatz at night' },
+      { id: 'savigny-5', src: `${base}works/group-Savigny-5.jpeg`, alt: 'Late-night urban scene outside a Späti at Savignyplatz with strong light contrast' },
+      { id: 'savigny-6', src: `${base}works/group-Savigny-6.jpeg`, alt: 'Raw Berlin nightlife moment near Savignyplatz with neon glow and shadows' },
     ],
   },
   {

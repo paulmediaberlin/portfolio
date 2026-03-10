@@ -20,36 +20,6 @@ export type VideoGroup = {
 // 3) (Optional) add a poster for better UX
 export const videoGroups: VideoGroup[] = [
   {
-    id: 'studio-editing',
-    title: { en: 'Studio Editing', de: 'Studio-Schnitt' },
-    description: {
-      en: 'Cutting, grading, and sound shaping in the dark.',
-      de: 'Schnitt, Grading und Sound im dunklen Studio.',
-    },
-    items: [
-      {
-        id: 'ex-football-player',
-        src: `${base}works/work-3.mp4`,
-        alt: 'Behind-the-scenes video of a production featuring an ex-football player',
-      },
-    ],
-  },
-  {
-    id: 'fight-preparation',
-    title: { en: 'Fight Preparation', de: 'Kampfvorbereitung' },
-    description: {
-      en: 'Raw footage turning into a story on screen.',
-      de: 'Rohmaterial, das zur Story auf dem Screen wird.',
-    },
-    items: [
-      {
-        id: 'fight-preparation',
-        src: `${base}works/work-5.mp4`,
-        alt: 'Video showing fight preparation and editing process in a dark room',
-      },
-    ],
-  },
-  {
     id: 'neon-messages',
     title: { en: 'Messages in Neon Light', de: 'Tiefe Botschaften im Neonlicht' },
     description: {
@@ -97,4 +67,33 @@ export const videoGroups: VideoGroup[] = [
       },
     ],
   },
-];
+  {
+    id: 'studio-editing',
+    title: { en: 'Studio Editing', de: 'Studio-Schnitt' },
+    description: {
+      en: 'Cutting, grading, and sound shaping in the dark.',
+      de: 'Schnitt, Grading und Sound im dunklen Studio.',
+    },
+    items: [
+      {
+        id: 'ex-football-player',
+        src: `${base}works/work-3.mp4`,
+        alt: 'Behind-the-scenes video of a production featuring an ex-football player',
+      },
+    ],
+  },
+  {
+    id: 'fight-preparation',
+    title: { en: 'Fight Preparation', de: 'Kampfvorbereitung' },
+    description: {
+      en: 'Raw footage turning into a story on screen.',
+      de: 'Rohmaterial, das zur Story auf dem Screen wird.',
+    },
+    items: [
+      {
+        id: 'fight-preparation',
+        src: `${base}works/work-5.mp4`,
+        alt: 'Video showing fight preparation and editing process in a dark room',
+      },
+    ],
+  }];
