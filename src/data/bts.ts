@@ -66,7 +66,6 @@ export const btsGroups: BTSGroup[] = [
     },
     items: [
       { id: 'smolik-1', type: 'portrait', src: `${base}works/group-smolik-1.mp4`, orientation: 'portrait' },
-      { id: 'smolik-2', type: 'portrait', src: `${base}works/group-smolik-2.mp4`, orientation: 'portrait' },
     ],
   },
   {
