@@ -51,7 +51,6 @@ export const btsGroups: BTSGroup[] = [
       { id: 'bikehub-1', type: 'portrait', src: `${base}works/group-bikehub-1.mp4`, orientation: 'portrait' },
       { id: 'bikehub-2', type: 'portrait', src: `${base}works/group-bikehub-2.mp4`, orientation: 'portrait' },
       { id: 'bikehub-3', type: 'portrait', src: `${base}works/group-bikehub-3.mp4`, orientation: 'portrait' },
-      { id: 'bikehub-4', type: 'portrait', src: `${base}works/group-bikehub-4.mp4`, orientation: 'portrait' },
     ],
   },
   {
@@ -66,6 +65,8 @@ export const btsGroups: BTSGroup[] = [
     },
     items: [
       { id: 'smolik-1', type: 'portrait', src: `${base}works/group-smolik-1.mp4`, orientation: 'portrait' },
+      { id: 'smolik-2', type: 'portrait', src: `${base}works/group-smolik-2.mp4`, orientation: 'portrait' },
+      { id: 'smolik-3', type: 'image', src: `${base}works/group-smolik-3.jpeg`, orientation: 'portrait' },
     ],
   },
   {
@@ -81,6 +82,7 @@ export const btsGroups: BTSGroup[] = [
     items: [
       { id: 'purize-1', type: 'portrait', src: `${base}works/group-purize-1.mp4`, orientation: 'portrait' },
       { id: 'purize-2', type: 'portrait', src: `${base}works/group-purize-2.mp4`, orientation: 'portrait' },
+      { id: 'purize-3', type: 'portrait', src: `${base}works/group-purize-3.mp4`, orientation: 'portrait' },
     ],
   },
   {
@@ -95,6 +97,8 @@ export const btsGroups: BTSGroup[] = [
     },
     items: [
       { id: 'club-1', type: 'portrait', src: `${base}works/group-88club-1.mp4`, orientation: 'portrait' },
+      { id: 'club-2', type: 'portrait', src: `${base}works/group-88club-2.mp4`, orientation: 'portrait' },
+      { id: 'club-3', type: 'portrait', src: `${base}works/group-88club-3.mp4`, orientation: 'portrait' },
     ],
   },
 
