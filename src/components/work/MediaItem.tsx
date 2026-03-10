@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { useActiveVideo } from '@/components/work/ActiveVideoContext';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface MediaItemProps {
+  id?: string;
   src: string;
   alt: string;
   title: string;
@@ -12,6 +14,7 @@ interface MediaItemProps {
   type?: 'image' | 'video' | 'portrait';
   poster?: string;
   hideMeta?: boolean;
+  interactionMode?: 'autoPlay' | 'hoverControlled';
 }
 
 const MuteIcon = ({ muted }: { muted: boolean }) =>
@@ -35,6 +38,7 @@ const PlayIcon = () => (
 );
 
 const MediaItem = ({
+  id,
   src,
   alt,
   title,
@@ -44,15 +48,28 @@ const MediaItem = ({
   type = 'image',
   poster,
   hideMeta,
+  interactionMode = 'autoPlay',
 }: MediaItemProps) => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.15, once: false });
 
+  const activeVideo = useActiveVideo();
+  const activeId = activeVideo?.activeId ?? null;
+  const setActive = activeVideo?.setActive;
+  const clearActive = activeVideo?.clearActive;
+  const mediaId = id ?? src;
+
   const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const isVideoType = type === 'video' || type === 'portrait';
 
   const [muted, setMuted] = useState(true);
   const [needsUserPlay, setNeedsUserPlay] = useState(false);
+  const [shouldLoadImage, setShouldLoadImage] = useState(isVideoType);
 
-  const isVideoType = type === 'video' || type === 'portrait';
+  const prefersReducedMotion = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }, []);
 
   const isMobile = useMemo(() => {
     if (typeof window === 'undefined') return false;
@@ -87,25 +104,40 @@ const MediaItem = ({
 
   // Attempt autoplay after metadata is ready (helps Firefox/Safari timing)
   const handleLoadedMetadata = () => {
-    // Only attempt automatically when in view
     if (isVisible) void tryPlay();
   };
 
-  // Desktop: play/pause based on visibility.
-  // Mobile/iOS: don't rely on scroll-trigger play (often blocked), but we can still pause when leaving.
+  // Autoplay modes
   useEffect(() => {
     const v = videoRef.current;
     if (!v || !isVideoType) return;
 
+    const isHoverControlled = interactionMode === 'hoverControlled';
+
     if (!isVisible) {
       v.pause();
+      if (isHoverControlled && activeId === mediaId) {
+        clearActive?.(mediaId);
+      }
       return;
     }
 
+    if (isHoverControlled) {
+      if (prefersReducedMotion) return;
+      const shouldPlay = activeId === mediaId;
+      if (shouldPlay) {
+        void tryPlay();
+      } else {
+        v.pause();
+      }
+      return;
+    }
+
+    // Default autoplay mode (used on /videos)
     if (!isMobile) {
       void tryPlay();
     }
-  }, [isVisible, isMobile, muted, isVideoType]);
+  }, [interactionMode, isVisible, isMobile, muted, isVideoType, activeId, mediaId, clearActive, prefersReducedMotion]);
 
   const handleToggleMute = async () => {
     const v = videoRef.current;
@@ -127,9 +159,74 @@ const MediaItem = ({
   };
 
   const handleUserPlay = async () => {
-    // User gesture -> should succeed across Safari/Chrome/Firefox
     await tryPlay();
   };
+
+  const handleMouseEnter = () => {
+    if (!isVideoType || interactionMode !== 'hoverControlled') return;
+    setActive?.(mediaId);
+  };
+
+  const handleMouseLeave = () => {
+    if (!isVideoType || interactionMode !== 'hoverControlled') return;
+    clearActive?.(mediaId);
+  };
+
+  const handleFocus = () => {
+    if (!isVideoType || interactionMode !== 'hoverControlled') return;
+    setActive?.(mediaId);
+  };
+
+  const handleBlur = () => {
+    if (!isVideoType || interactionMode !== 'hoverControlled') return;
+    clearActive?.(mediaId);
+  };
+
+  const handlePointerDown = () => {
+    if (!isVideoType || interactionMode !== 'hoverControlled') return;
+    if (isMobile) {
+      setActive?.(mediaId);
+    }
+  };
+
+  const handleVideoClick = async () => {
+    if (!isVideoType) return;
+
+    if (interactionMode === 'hoverControlled' && activeId !== mediaId) {
+      setActive?.(mediaId);
+      await tryPlay();
+      return;
+    }
+
+    await handleToggleMute();
+  };
+
+  useEffect(() => {
+    if (isVideoType) return;
+    if (shouldLoadImage) return;
+
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+      setShouldLoadImage(true);
+      return;
+    }
+
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoadImage(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '800px 0px', threshold: 0 },
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [isVideoType, shouldLoadImage, ref]);
 
   return (
     <motion.div
@@ -138,6 +235,11 @@ const MediaItem = ({
       animate={isVisible ? 'visible' : 'hidden'}
       variants={variants}
       className="group"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      onPointerDown={handlePointerDown}
     >
       <div className="media-item mb-6 flex items-center justify-center relative">
         {isVideoType ? (
@@ -147,13 +249,21 @@ const MediaItem = ({
               src={src}
               poster={poster}
               muted
-              autoPlay
+              autoPlay={interactionMode === 'autoPlay'}
               loop
               playsInline
               preload="metadata"
-              onClick={handleToggleMute}
+              onLoadedMetadata={handleLoadedMetadata}
+              onClick={handleVideoClick}
               className="max-h-[80vh] w-full object-contain"
             />
+
+            <div
+              className="pointer-events-none absolute left-3 top-3 flex items-center gap-2 rounded-full bg-black/55 px-3 py-1 text-xs font-medium uppercase tracking-wide text-white opacity-80 transition group-hover:opacity-100"
+              aria-hidden
+            >
+              <PlayIcon />
+            </div>
 
             {needsUserPlay && (
               <button
@@ -195,7 +305,15 @@ const MediaItem = ({
             </button>
           </div>
         ) : (
-          <img src={src} alt={alt} loading="lazy" className="max-h-[80vh]" />
+          <img
+            src={shouldLoadImage ? src : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=='}
+            data-src={src}
+            alt={alt}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            className="max-h-[80vh]"
+          />
         )}
       </div>
 

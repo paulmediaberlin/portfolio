@@ -3,10 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 interface UseScrollAnimationOptions {
   threshold?: number;
   once?: boolean;
+  rootMargin?: string;
 }
 
 export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
-  const { threshold = 0.1, once = true } = options;
+  const { threshold = 0.1, once = true, rootMargin = '0px' } = options;
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -25,7 +26,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
           setIsVisible(false);
         }
       },
-      { threshold }
+      { threshold, rootMargin }
     );
 
     observer.observe(element);
