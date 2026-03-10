@@ -44,8 +44,8 @@ const Bts = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
                       {group.items.map((item, index) => {
-                        const isVideo = item.type === 'video';
-                        const wrapperClass = isVideo
+                        const isLandscapeVideo = item.type === 'video' && item.orientation !== 'portrait';
+                        const wrapperClass = isLandscapeVideo
                           ? 'w-full max-w-4xl sm:col-span-2 lg:col-span-3'
                           : 'w-full max-w-xl';
 

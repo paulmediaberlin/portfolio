@@ -54,21 +54,16 @@
       "clientsLabel": "Kunden",
       "clients": "The Meat Company, Michael Smolik, ESN-Athleten, Abdu (The Voice Man)"
     },
-    "experience": {
-      "title": "Berufserfahrung",
-      "items": [
-        {
-          "role": "Kreativdirektor",
-          "company": "Studio Rallia",
-          "period": "2021 – Heute"
-        },
-        {
-          "role": "Fotograf",
-          "company": "Studio Rallia",
-          "period": "2017 – 2021"
-        }
-      ]
-    },
+      "experience": {
+        "title": "Berufserfahrung",
+        "items": [
+          {
+            "role": "Werbeagentur",
+            "company": "Berlin",
+            "period": "01/2025 – 05/2025"
+          }
+        ]
+      },
     "education": {
       "title": "Ausbildung",
       "items": [

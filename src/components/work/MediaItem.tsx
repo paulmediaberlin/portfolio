@@ -9,7 +9,7 @@ interface MediaItemProps {
   year: string;
   description: string;
   index: number;
-  type?: 'image' | 'video';
+  type?: 'image' | 'video' | 'portrait';
   poster?: string;
   hideMeta?: boolean;
 }
@@ -52,6 +52,8 @@ const MediaItem = ({
   const [muted, setMuted] = useState(true);
   const [needsUserPlay, setNeedsUserPlay] = useState(false);
 
+  const isVideoType = type === 'video' || type === 'portrait';
+
   const isMobile = useMemo(() => {
     if (typeof window === 'undefined') return false;
     return window.matchMedia('(pointer: coarse)').matches;
@@ -93,7 +95,7 @@ const MediaItem = ({
   // Mobile/iOS: don't rely on scroll-trigger play (often blocked), but we can still pause when leaving.
   useEffect(() => {
     const v = videoRef.current;
-    if (!v || type !== 'video') return;
+    if (!v || !isVideoType) return;
 
     if (!isVisible) {
       v.pause();
@@ -103,7 +105,7 @@ const MediaItem = ({
     if (!isMobile) {
       void tryPlay();
     }
-  }, [isVisible, isMobile, muted, type]);
+  }, [isVisible, isMobile, muted, isVideoType]);
 
   const handleToggleMute = async () => {
     const v = videoRef.current;
@@ -138,7 +140,7 @@ const MediaItem = ({
       className="group"
     >
       <div className="media-item mb-6 flex items-center justify-center relative">
-        {type === 'video' ? (
+        {isVideoType ? (
           <div className="relative">
             <video
               ref={videoRef}

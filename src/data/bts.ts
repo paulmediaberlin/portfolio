@@ -2,9 +2,10 @@ const base = import.meta.env.BASE_URL; // "/portfolio/" in prod, "/" in dev
 
 export type BTSItem = {
   id: string;
-  type: 'image' | 'video';
+  type: 'image' | 'video' | 'portrait'; // 'portrait' = portrait-oriented video
   src: string;
   poster?: string;
+  orientation?: 'portrait' | 'landscape';
 };
 
 export type BTSGroup = {
@@ -17,20 +18,23 @@ export type BTSGroup = {
 // To add new BTS content:
 // 1) Drop files into public/bts/ (kebab-case filenames). Add posters for videos.
 // 2) Append a group below with title/description and item list pointing to the files.
-// 3) Done – /bts will render automatically with grouped media.
+// 3) Use type 'portrait' for portrait videos (they span multiple columns). Use type 'video' for landscape videos and type 'image' for photos. Orientation can be set explicitly if needed.
+// 4) Done – /bts will render automatically with grouped media.
 export const btsGroups: BTSGroup[] = [
   {
-    id: '88club-rooftop-pop-event',
+    id: 'shortfilm-voice-man',
     title: {
-      en: '88 Club Rooftop - Pop Event | Ku’damm Berlin',
-      de: '88 Club Rooftop - Pop Event | Ku’damm Berlin',
+      en: 'Short Film with The Voice Man (Abdu)',
+      de: 'Kurzfilm mit The Voice Man (Abdu)',
     },
     description: {
-      en: 'Moment from a pop event at 88 Club Berlin on Kurfürstendamm, captured from above the dancefloor. The footage shows the setup and atmosphere of an urban rooftop event in the center of the city.',
-      de: 'Momentaufnahme eines Pop Events im 88 Club Berlin am Kurfürstendamm, eingefangen aus der Perspektive über dem Dancefloor. Die Aufnahmen zeigen das Setup und die Atmosphäre eines urbanen Rooftop-Events mitten in der City.',
+      en: 'Behind-the-scenes insights from a short film project with Abdu, known as "The Voice Man". The images capture moments from the shoot inside a bar location where atmospheric scenes and emotional dialogues are staged for the film.',
+      de: 'Behind-the-Scenes Einblicke eines Kurzfilmprojekts mit Abdu – bekannt als “The Voice Man”. Die Aufnahmen zeigen Momente vom Dreh in einer Bar-Location, während atmosphärische Szenen und emotionale Dialoge für den Film inszeniert werden.',
     },
     items: [
-      { id: 'club-1', type: 'video', src: `${base}works/group-88club-1.mp4` },
+      { id: 'voice-man-1', type: 'image', src: `${base}works/group-voice-man-1.jpeg`, orientation: 'landscape' },
+      { id: 'voice-man-2', type: 'image', src: `${base}works/group-voice-man-2.jpeg`, orientation: 'landscape' },
+      { id: 'voice-man-3', type: 'image', src: `${base}works/group-voice-man-3.jpeg`, orientation: 'landscape' },
     ],
   },
   {
@@ -44,10 +48,10 @@ export const btsGroups: BTSGroup[] = [
       de: 'Behind-the-Scenes Einblicke eines Videodrehs mit Bikehub rund um das Olympiastadion Berlin. Die Aufnahmen zeigen Set-Momente während der Produktion - inklusive Stunt-Bikes, urbanen Locations und dem Einsatz von legaler Pyrotechnik für cineastische Effekte.',
     },
     items: [
-      { id: 'bikehub-1', type: 'video', src: `${base}works/group-bikehub-1.mp4` },
-      { id: 'bikehub-2', type: 'video', src: `${base}works/group-bikehub-2.mp4` },
-      { id: 'bikehub-3', type: 'video', src: `${base}works/group-bikehub-3.mp4` },
-      { id: 'bikehub-4', type: 'video', src: `${base}works/group-bikehub-4.mp4` },
+      { id: 'bikehub-1', type: 'portrait', src: `${base}works/group-bikehub-1.mp4`, orientation: 'portrait' },
+      { id: 'bikehub-2', type: 'portrait', src: `${base}works/group-bikehub-2.mp4`, orientation: 'portrait' },
+      { id: 'bikehub-3', type: 'portrait', src: `${base}works/group-bikehub-3.mp4`, orientation: 'portrait' },
+      { id: 'bikehub-4', type: 'portrait', src: `${base}works/group-bikehub-4.mp4`, orientation: 'portrait' },
     ],
   },
   {
@@ -61,8 +65,8 @@ export const btsGroups: BTSGroup[] = [
       de: 'Behind-the-Scenes Einblicke einer Videoproduktion mit Michael Smolik in Heidelberg. Momentaufnahmen vom Set – von Vorbereitung und Kamera-Setup.',
     },
     items: [
-      { id: 'smolik-1', type: 'video', src: `${base}works/group-smolik-1.mp4` },
-      { id: 'smolik-2', type: 'video', src: `${base}works/group-smolik-2.mp4` },
+      { id: 'smolik-1', type: 'portrait', src: `${base}works/group-smolik-1.mp4`, orientation: 'portrait' },
+      { id: 'smolik-2', type: 'portrait', src: `${base}works/group-smolik-2.mp4`, orientation: 'portrait' },
     ],
   },
   {
@@ -76,53 +80,23 @@ export const btsGroups: BTSGroup[] = [
       de: 'Behind-the-Scenes Eindrücke vom Purize Pop-Up Event im Herzen von Charlottenburg. Die Aufnahmen zeigen Momente des Events, Begegnungen vor Ort sowie Künstler und Creator - unter anderem Kasimir - in einer urbanen, spontanen Atmosphäre.',
     },
     items: [
-      { id: 'purize-1', type: 'video', src: `${base}works/group-purize-1.mp4` },
-      { id: 'purize-2', type: 'video', src: `${base}works/group-purize-2.mp4` },
+      { id: 'purize-1', type: 'portrait', src: `${base}works/group-purize-1.mp4`, orientation: 'portrait' },
+      { id: 'purize-2', type: 'portrait', src: `${base}works/group-purize-2.mp4`, orientation: 'portrait' },
     ],
   },
   {
-    id: 'studio-editing',
+    id: '88club-rooftop-pop-event',
     title: {
-      en: 'Studio Editing',
-      de: 'Studio-Schnitt',
+      en: '88 Club Rooftop - Pop Event | Ku’damm Berlin',
+      de: '88 Club Rooftop - Pop Event | Ku’damm Berlin',
     },
     description: {
-      en: 'Behind the desk: cutting, grading, and sound in a dark room.',
-      de: 'Am Schnittplatz: Schnitt, Grading und Sound im dunklen Studio.',
+      en: 'Moment from a pop event at 88 Club Berlin on Kurfürstendamm, captured from above the dancefloor. The footage shows the setup and atmosphere of an urban rooftop event in the center of the city.',
+      de: 'Momentaufnahme eines Pop Events im 88 Club Berlin am Kurfürstendamm, eingefangen aus der Perspektive über dem Dancefloor. Die Aufnahmen zeigen das Setup und die Atmosphäre eines urbanen Rooftop-Events mitten in der City.',
     },
     items: [
-      { id: 'studio-1', type: 'video', src: `${base}bts/work-3.mp4` },
-      { id: 'studio-2', type: 'video', src: `${base}bts/work-5.mp4` },
+      { id: 'club-1', type: 'portrait', src: `${base}works/group-88club-1.mp4`, orientation: 'portrait' },
     ],
   },
-  {
-    id: 'gym-shoot',
-    title: {
-      en: 'Gym Shoot',
-      de: 'Gym-Shooting',
-    },
-    description: {
-      en: 'On set among ropes, bags, and sweat — capturing movement.',
-      de: 'Am Set zwischen Seilen, Säcken und Schweiß – Bewegung einfangen.',
-    },
-    items: [
-      { id: 'gym-1', type: 'image', src: `${base}bts/work-1.png` },
-      { id: 'gym-2', type: 'image', src: `${base}bts/work-2.png` },
-    ],
-  },
-  {
-    id: 'street-night',
-    title: {
-      en: 'Street at Night',
-      de: 'Straße bei Nacht',
-    },
-    description: {
-      en: 'Late city light, handheld grit, and quick setups.',
-      de: 'Spätes Stadtlicht, Handkamera und schnelle Setups.',
-    },
-    items: [
-      { id: 'street-1', type: 'image', src: `${base}bts/work-8.jpg` },
-      { id: 'street-2', type: 'image', src: `${base}bts/work-10.jpeg` },
-    ],
-  },
+
 ];
