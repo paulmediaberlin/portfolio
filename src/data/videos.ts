@@ -52,22 +52,6 @@ export const videoGroups: VideoGroup[] = [
     ],
   },
   {
-    id: 'behind-the-fighter',
-    title: { en: 'Behind the Fighter', de: 'Hinter dem Kämpfer' },
-    description: {
-      en: 'Excerpt from a short film project with Michael Smolik exploring stereotypes in combat sports and the stories behind the persona of a fighter. Shot as a cinematic look into training, mindset, and the reality behind the ring.',
-      de: 'Ausschnitt aus einem Kurzfilmprojekt mit Michael Smolik, das sich mit Vorurteilen im Kampfsport und den Geschichten hinter der Persona eines Fighters beschäftigt. Gedreht als cineastischer Einblick in Training, Mentalität und Realität hinter dem Ring.',
-    },
-    items: [
-      {
-        id: 'michi2',
-        src: `${base}works/michi2.mp4`,
-        alt: 'Cinematic scene of Michael Smolik training, showing the reality and mindset behind a fighter',
-        poster: `${base}works/michi2-poster.jpg`,
-      },
-    ],
-  },
-  {
     id: 'studio-editing',
     title: { en: 'Studio Editing', de: 'Studio-Schnitt' },
     description: {
